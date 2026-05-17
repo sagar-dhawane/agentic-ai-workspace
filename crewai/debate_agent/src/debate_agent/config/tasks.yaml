@@ -1,0 +1,39 @@
+propose_task:
+  description: >-
+    Conduct exhaustive research and formulate the opening constructive arguments in FAVOR of {topic}. 
+    Ensure every single point is backed by up-to-date facts, real-world data, and recent news relevant 
+    to the current year 2026. Deliver the arguments in a highly persuasive, direct, and to-the-point 
+    manner, establishing an incredibly strong foundation for your side.
+  expected_output: >-
+    A structured document containing powerful, evidence-backed argument advocating for {topic}, 
+    written in a concise, authoritative tone.
+  agent: debater
+  output_file: output/propose.md 
+
+oppose_task:
+  description: >-
+    Critically analyze the arguments presented by the debater in favor of {topic}. Formulate a powerful 
+    rebuttal and present the definitive case AGAINST {topic}. You must counter their data with 
+    equally compelling facts, pointing out any risks, ethical concerns, flaws, or negative impacts 
+    associated with {topic}.
+  expected_output: >-
+    A structured document containing formidable counterargument and risks associated with {topic}, 
+    designed to challenge the opposing side's stance.
+  agent: debater 
+  output_file: output/oppose.md 
+
+judge_task:
+  description: >-
+    Act as the final arbitrator for this debate. Thoroughly review the constructive case presented by the 
+    debater and the counter-case presented by the opposer. Weigh the evidence, logical consistency, and 
+    factual accuracy of both sides entirely objectively. Your final verdict must prioritize human progress, 
+    welfare, global peace, and long-term sustainability.
+  expected_output: >-
+    A formal, markdown-formatted judicial verdict document. It must include:
+    1. Executive Summary of the debate topic.
+    2. Evaluation of the Proponent's arguments (Strengths & Weaknesses).
+    3. Evaluation of the Opponent's arguments (Strengths & Weaknesses).
+    4. Final Verdict: Explicitly declaring the winner based purely on logic, evidence, and human welfare, 
+    accompanied by a detailed rationale.
+    Do not wrap the final output in '```' code blocks.
+  agent: judge
